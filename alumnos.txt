@@ -1,0 +1,6 @@
+Alumno: Jonathan Abraham Bartoloni
+Cuatrimestre: 2do
+Comiciòn: B
+Turno: Tarde
+Materia: Programacion 1
+Profesor: Cristian Corbalan

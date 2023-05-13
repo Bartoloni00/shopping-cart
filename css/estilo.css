@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+/*-------------------------------------------------- General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas: 'smt1' 'hdr' 'mn' 'ftr' 'smt2';
+    background-color: #FBFBFB;
+    color: #333333;
+}
+
+/*-------------------------------------------------- Classes */
+.d-block{
+    display: block;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mt-1{
+    margin-top: 1rem;
+}
+.ml-1{
+    margin-left: 1rem;
+}
+.mr-1{
+    margin-right: 1rem;
+}
+
+/*-------------------------------------------------- Text */
+h1, h2, h3, p {
+    line-height: 1.6em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #3B60E4;
+    transition: color 300ms ease-in-out;
+}
+
+a:hover, a:focus {
+    color: #384E77;
+}
+
+/*-------------------------------------------------- List */
+ul {
+    padding-left: 3rem;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+/*-------------------------------------------------- Button */
+
+button {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    background-color: #5CAEBF;
+    border: none;
+    border-radius: 6px;
+    transition: opacity 300ms ease-in-out;
+}
+
+button:hover, button:focus {
+    opacity: .6;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/*-------------------------------------------------- Container */
+hr {
+    margin-bottom: 1rem;
+    border-color: rgba(51, 51, 51, 0.2);
+}
+
+div {
+    padding: 1rem 0;
+}
+
+/*-------------------------------------------------- Clases */
+.mt-1{
+    margin-top: 1rem;
+}
+
+
+/*-------------------------------------------------- Header */
+header {
+    text-align: center;
+    padding: .5rem 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background-color: #FBFBFB;
+    grid-area: hdr;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+/*-------------------------------------------------- Main */
+main {
+    padding: 3rem 2rem;
+    font-size: 1.2em;
+    grid-area: mn;
+}
+
+/*-------------------------------------------------- Footer */
+footer {
+    background-color: #FBFBFB;
+    padding: 0 1rem;
+    grid-area: ftr;
+}
+
+footer ul {
+    border-top: 1px solid rgba(34, 34, 34, .15);
+    padding: 1rem 0 1.5rem 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer li {
+    font-size: .8rem;
+    line-height: 1.6em;
+    color: rgba(51, 51, 51, 0.8);
+    margin-bottom: 0;
+}
+
+/*-------------------------------------------------- Forms */
+label {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+input {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    padding: .5rem 1rem;
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    border-radius: 6px;
+    color: #333333;
+}
+
+/*-------------------------------------------------- Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    border-radius: 6px;
+}
+
+.gallery > img {
+    max-width: 90%;
+    margin: 1em 5%;
+    border-radius: 6px;
+}
+
+.gallery > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5em;
+    height: 5em;
+}
+
+.gallery div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    padding: 1em;
+}
+
+.gallery div img {
+    width: 100%;
+}
+
+.gallery div h3 {
+    padding: .5em;
+    margin-bottom: 0;
+    /*font-size: 3.2em;*/
+    text-align: center;
+    /*color: #134F5C;*/
+}
+
+.gallery div p {
+    padding: .5em;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+
+/*----------- Carrito*/
+
+#minicarrito{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #a4a4a4;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+}
+
+#minicarrito * {
+    margin: 0;
+}
+
+#minicarrito + h2 {
+    text-align: center;
+}
+
+#productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#productos > div{
+    width: 28%;
+    text-align: center;
+}
+
+#productos > div > img{
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal > div{
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding: 1rem;
+    min-width: 400px;
+}
+
+.modal a {
+    text-decoration: none;
+    /*color: #d0e0e3;*/
+}
+
+.modal a.cerrar {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 1em;
+    right: 1em;
+    border-radius: 2.5em;
+    width: 5em;
+    height: 5em;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    color: #FF8C00;
+    text-decoration: none;
+}
+
+.modal a.cerrar:hover {
+    background-color: #FF8C00;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.modal img {
+    height: 30%;
+    max-width: 300px;
+}
+
+.modal h3,
+.modal p,
+.modal li {
+    margin: 0;
+    text-align: center;
+    /*color: #d0e0e3;*/
+}
+
+.modal li {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.25em 0;
+    /*width: 90%;*/
+}
+
+.modal li span {
+    font-size: 1em;
+}
+
+.modal ul{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/**
+ * Web
+ */
+@media screen and (min-width: 960px) {
+
+    /** Main */
+    main div.gallery {
+        flex-direction: row;
+    }
+
+    main div.gallery > img {
+        max-width: 24%;
+        margin: 1em .5%;
+    }
+
+    main div.gallery div {
+        align-self: flex-start;
+        width: 30%;
+    }
+
+    /** Footer */
+    footer ul {
+        flex-direction: row;
+    }
+
+}

@@ -1,0 +1,30 @@
+.Formulario, .resumen{
+    width: 50%;
+    border: 1px solid #000;
+}
+.contenedor{
+    width: 100% !important;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.Formulario>fieldset{
+    margin: 10px;
+    padding: 10px;
+}
+.Formulario>fieldset>legend{
+    text-align: center;
+    font-size: 1.2em;
+}
+input{
+    margin-top: 0px;
+    margin:auto;
+}
+label{
+    margin-bottom: 5px !important;
+    margin-top: 20px;
+}
+.Formulario>fieldset>.cuotas>select{
+    padding: 5px;
+    margin: auto;
+
+}
